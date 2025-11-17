@@ -33,7 +33,7 @@ const saveAndBroadcastMessage = async (
 export function setupChatSocket(server: HTTPServer) {
     const io = new SocketIOServer(server, {
         cors: {
-            origin: process.env.ALLOWED_ORIGINS?.split(",") || "*",
+            origin: "*",
             methods: ["GET", "POST"],
         },
     });
