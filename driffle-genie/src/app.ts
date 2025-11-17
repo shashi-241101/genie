@@ -21,10 +21,9 @@ app.use(
  * CORS Setup
  */
 let allowedOrigins: Array<string> = [];
-allowedOrigins = String(process.env.ALLOWED_ORIGINS || "").split(",");
 app.use(
     cors({
-        origin: allowedOrigins,
+        origin: "*",
         credentials: true,
     })
 );
